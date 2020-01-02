@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>U of T Engineering Questions</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <!--Title and Navigation Bar-->
+        <section id="header">
+        <div class="container">
+                <div class="top bar">
+                    <div class="nav-bar">
+                        <div class="title text-center">
+                            <h1>U of T Engineering Questions</h1>
+                        </div>
+                        <div class="navbar">
+                            <ul class="nav-item active">
+                                <a class="nav-link" href="signup.html">Sign Up</a>
+                            </ul>
+                            <ul class="nav-item">
+                                <a class="nav-link" href="login.html">Login</a>
+                            </ul>
+                            <ul class="nav-item">
+                                <a class="nav-link" href="classes.html">Classes</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="login">
+            <div class="login-title text-center">
+                <h1>Login</h1>
+            </div>
+            <div class="login-input">
+                <form id="login-input" action="/user_login" method="POST">
+                    Email:<br>
+                    <input type="text" name="email"><br>
+                    Password:<br>
+                    <input type="text" name="password"><br>
+                    <div class="button">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </body>
+</html>
