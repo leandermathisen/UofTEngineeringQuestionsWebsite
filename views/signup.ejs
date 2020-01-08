@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>U of T Engineering Questions Sign Up</title>
+        <link rel="stylesheet" href="/styles/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <!--Header-->
+        <section id="header">
+            <div class="container">
+                <div class="top bar">
+                    <div class="nav-bar">
+                        <div class="title text-center">
+                            <h1>U of T Engineering Questions</h1>
+                        </div>
+                        <div class="navbar">
+                            <ul class="nav-item active">
+                                <a class="nav-link" href="signup.ejs">Sign Up</a>
+                            </ul>
+                            <ul class="nav-item">
+                                <a class="nav-link" href="login.ejs">Login</a>
+                            </ul>
+                            <ul class="nav-item">
+                                <a class="nav-link" href="classes.ejs">Classes</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Register-->
+        <section id="register">
+            <div class="register-title text-center">
+                <h1>Register as a User</h1>
+            </div>
+            <div class="register-input">
+                <form id="register-input" action="/user_create" method="POST">
+                    First Name:<br>
+                    <input type="text" name="first_name"><br>
+                    Last Name:<br>
+                    <input type="text" name="last_name"><br>
+                    Email:<br>
+                    <input type="text" name="email"><br>
+                    Password:<br>
+                    <input type="text" name="password"><br>
+                    Discipline:<br>
+                    <input type="radio" id="disciplineChoice1" name="discipline" value="ECE">
+                    <label for="disciplineChoice1">ECE</label>
+                    <input type="radio" id="disciplineChoice2" name="discipline" value="MECH">
+                    <label for="disciplineChoice2">MECH</label>
+                    <input type="radio" id="disciplineChoice3" name="discipline" value="CHEM">
+                    <label for="disciplineChoice3">CHEM</label>
+                    <input type="radio" id="disciplineChoice4" name="discipline" value="MIN">
+                    <label for="disciplineChoice4">MIN</label>
+                    <input type="radio" id="disciplineChoice5" name="discipline" value="ENG SCI">
+                    <label for="disciplineChoice5">ENG SCI</label>
+                    <input type="radio" id="disciplineChoice6" name="discipline" value="CIV">
+                    <label for="disciplineChoice6">CIV</label>
+                    <input type="radio" id="disciplineChoice7" name="discipline" value="MATR">
+                    <label for="disciplineChoice7">MATR</label><br>
+                    Year:<br>
+                    <input type="radio" id="yearChoice1" name="graduation_year" value="1T9">
+                    <label for="yearChoice1">1T9</label>
+                    <input type="radio" id="yearChoice2" name="graduation_year" value="2T0">
+                    <label for="yearChoice2">2T0</label>
+                    <input type="radio" id="yearChoice3" name="graduation_year" value="2T1">
+                    <label for="yearChoice3">2T1</label>
+                    <input type="radio" id="yearChoice4" name="graduation_year" value="2T2">
+                    <label for="yearChoice4">2T2</label>
+                    <input type="radio" id="yearChoice5" name="graduation_year" value="2T3">
+                    <label for="yearChoice5">2T3</label>
+                    <div class="button">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </body>
+
+</html>
