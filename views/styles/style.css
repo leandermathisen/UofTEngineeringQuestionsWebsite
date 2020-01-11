@@ -4,6 +4,7 @@ body
     padding: 0;
     font-family: sansserif;
 }
+
 /* Header */
 #header
 {
@@ -35,4 +36,32 @@ body
 .wrong-login h5
 {
     color: #ff0000;
+}
+
+/* Classes */
+#classes
+{
+    color: #000;
+    font-size: 30px;
+    padding-top: 20px;
+    text-align: center;
+}
+.classes-table table, th, td
+{
+    border: 1px solid black;
+}
+.classes-table table
+{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.classes-table th
+{
+    background-color: #000;
+    color: #fff;
+}
+.classes-table tr:hover
+{
+    background-color: #f5f5f5;
 }

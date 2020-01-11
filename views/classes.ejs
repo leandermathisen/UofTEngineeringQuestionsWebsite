@@ -20,13 +20,13 @@
                         </div>
                         <div class="navbar">
                             <ul class="nav-item active">
-                                <a class="nav-link" href="signup.ejs">Sign Up</a>
+                                <a class="nav-link" href="/signup">Sign Up</a>
                             </ul>
                             <ul class="nav-item">
-                                <a class="nav-link" href="login.ejs">Login</a>
+                                <a class="nav-link" href="/login">Login</a>
                             </ul>
                             <ul class="nav-item">
-                                <a class="nav-link" href="classes.ejs">Classes</a>
+                                <a class="nav-link" href="/classes">Classes</a>
                             </ul>
                         </div>
                     </div>
@@ -34,20 +34,25 @@
             </div>
         </section>
 
-        <section>
-            <table>
-                <tr>
-                    <th>Class Name</th>
-                    <th>Class Code</th>
-                </tr>
-                <% for(var i=0; i < rows.length; i++) { %>
-                    <tr>
-                      <td><%= rows[i].id %></td>
-                      <td><%= rows[i].user %></td>
-                      <td><%= rows[i].PASS %></td>
-                    </tr>
-                 <% } %>
-            </table>
+        <section id="classes">
+            <div class="classes-table">
+                <table id="table" class="center">
+                    <thead>  
+                        <tr>  
+                            <th>Class Name</th>  
+                            <th>Class Code</th>  
+                        </tr>  
+                    </thead>  
+                    <tbody>  
+                     <% print.forEach(function (classes) { %>
+                        <tr>  
+                            <td><%= classes.className %></td>  
+                            <td><%= classes.classCode %></td>
+                        </tr>                                   
+                     <% }) %>
+                     </tbody>
+                </table>
+            </div>
         </section>
     </body>
 </html>

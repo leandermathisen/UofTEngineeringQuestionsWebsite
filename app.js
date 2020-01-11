@@ -54,13 +54,18 @@ app.post('/user_login', (req, res) => {
 
     const queryString = "SELECT password FROM users WHERE email = ?";
     connection.query(queryString, [email], (err, results, fields) => {
-        if (results[0].password == password) {
-            console.log("Successfully logged in user.");
-            res.render('home.ejs');
+        try {
+            if (results[0].password == password) {
+                console.log("Successfully logged in user.");
+                res.render('home.ejs');
+            }
+            else {
+                console.log("wrong password");
+                res.render('login_wrong.ejs');
+            }
         }
-        else {
-            console.log("wrong password");
-            res.render('login_wrong.ejs');
+        catch (err) {
+            console.log("There was an error")
         }
     });
 });
@@ -101,8 +106,8 @@ app.get("/users", (req, res) => {
     });
 });
 
-app.get("/classes", (req, res) => {
-    const queryString = "SELECT * FROM classes"
+app.get("/allclasses", (req, res) => {
+    const queryString = "SELECT * FROM classes";
     connection.query(queryString, (err, rows, fields) => {
         if (!err) {
             console.log("Successfully fetched all classes.");
@@ -114,8 +119,27 @@ app.get("/classes", (req, res) => {
     });
 });
 
-app.get('/loadLogin', (req, res) => {
+app.get('/login', (req, res) => {
     res.render('login.ejs');
+});
+
+app.get('/signup', (req, res) => {
+    res.render('signup.ejs');
+});
+
+app.get('/classes', (req, res) => {
+    var obj;
+    const queryString = "SELECT * FROM classes";
+    connection.query(queryString, function(err, result) {
+        if (err) {
+            throw err;
+        }
+        else {
+            obj = {print: result};
+            res.render('classes.ejs', obj);
+            console.log(obj);
+        }
+    });
 });
 
 app.listen(1212, () => {
